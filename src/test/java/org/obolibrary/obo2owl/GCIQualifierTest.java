@@ -1,6 +1,7 @@
 package org.obolibrary.obo2owl;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -44,6 +45,7 @@ public class GCIQualifierTest extends OboFormatTestBasics  {
 			boolean ok = false;
 			for (OWLSubClassOfAxiom sca : scas) {
 				System.out.println(sca);
+				@SuppressWarnings("unused")
 				OWLClassExpression sub = sca.getSubClass();
 				ok = true;
 			}

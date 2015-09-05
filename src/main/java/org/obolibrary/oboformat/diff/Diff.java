@@ -1,11 +1,7 @@
 package org.obolibrary.oboformat.diff;
 
-import java.io.IOException;
-import java.util.Vector;
-
 import org.obolibrary.oboformat.model.Clause;
 import org.obolibrary.oboformat.model.Frame;
-import org.obolibrary.oboformat.model.Frame.FrameType;
 
 public class Diff {
 
@@ -70,6 +66,7 @@ public class Diff {
 		this.clause2 = clause2;
 	}
 
+	@Override
 	public String toString() {
 		return type + " " + frameType +
 		" Frame1="+(frame1 == null ? "-" : frame1.getId()) +

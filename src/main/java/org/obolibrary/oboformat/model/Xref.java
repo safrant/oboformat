@@ -21,6 +21,7 @@ public class Xref {
 		this.annotation = annotation;
 	}
 
+	@SuppressWarnings("unused")
 	public boolean equals(Object e) {
 
 		if(e == null || !(e instanceof Xref))

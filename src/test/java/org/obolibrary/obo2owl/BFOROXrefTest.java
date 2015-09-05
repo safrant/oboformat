@@ -1,6 +1,6 @@
 package org.obolibrary.obo2owl;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertTrue;
 
 import java.util.Collection;
 import java.util.Set;
@@ -25,9 +25,9 @@ public class BFOROXrefTest extends OboFormatTestBasics {
 
 		// test initial conversion
 		Set<OWLObjectProperty> ops =  owlOnt.getObjectPropertiesInSignature();
-		for (OWLObjectProperty op : ops) {
-			//System.out.println("OP:"+op);
-		}
+		// for (OWLObjectProperty op : ops) {
+		// //System.out.println("OP:"+op);
+		// }
 		assertTrue(ops.size() == 4);
 		Set<OWLAnnotationAssertionAxiom> aaas = owlOnt.getAnnotationAssertionAxioms(IRI.create("http://purl.obolibrary.org/obo/BFO_0000051"));
 		boolean ok = false;

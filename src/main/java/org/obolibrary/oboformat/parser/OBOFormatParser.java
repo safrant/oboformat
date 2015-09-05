@@ -938,7 +938,6 @@ public class OBOFormatParser {
 			cl.setValue(dateStr);
 			return true;
 		/*} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}*/
@@ -1357,7 +1356,7 @@ public class OBOFormatParser {
 		parseZeroOrMoreWs();
 		String v = getParseUntil("!{");
 
-		// strip whitespace from the end - TODO
+		// strip whitespace from the end -
 		v = removeTrailingWS(v);
 		
 		cl.setValue(v);

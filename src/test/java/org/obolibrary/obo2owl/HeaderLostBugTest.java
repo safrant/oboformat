@@ -1,6 +1,7 @@
 package org.obolibrary.obo2owl;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertTrue;
 
 import java.io.File;
 import java.util.Set;
@@ -37,6 +38,7 @@ public class HeaderLostBugTest extends OboFormatTestBasics {
 		OWLOntology ontology = manager.loadOntologyFromOntologyDocument(ontologyIRI);
 		
 		Set<OWLAnnotation> ontAnns = ontology.getAnnotations();
+		@SuppressWarnings("unused")
 		Set<OWLAnnotationAssertionAxiom> axioms = ontology.getAnnotationAssertionAxioms(ontologyIRI);
 
 		System.out.println("ont.getAnnotation() = " + ontology.getAnnotations());

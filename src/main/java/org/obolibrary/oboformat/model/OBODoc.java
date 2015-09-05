@@ -195,7 +195,6 @@ public class OBODoc {
 		if (prefix.equals("RO")) {
 			return "http://purl.obolibrary.org/obo/RO_";
 		}
-		// TODO
 		return null;
 	}
 

@@ -1,6 +1,6 @@
 package org.obolibrary.macro;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertTrue;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -8,7 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.obolibrary.obo2owl.RoundTripTest;
 import org.semanticweb.owlapi.model.AxiomType;
-import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDisjointClassesAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -38,7 +37,8 @@ public class ExpandTaxonConstraintsTest extends RoundTripTest {
 	public void testExpand() throws Exception {
 		OWLOntology ontology = convert(parseOBOFile("taxon_constraints.obo"));
 
-		OWLDataFactory df = ontology.getOWLOntologyManager().getOWLDataFactory();
+		// OWLDataFactory df =
+		// ontology.getOWLOntologyManager().getOWLDataFactory();
 	
 		MacroExpansionVisitor mev = new MacroExpansionVisitor(ontology);
 		OWLOntology outputOntology = mev.expandAll();

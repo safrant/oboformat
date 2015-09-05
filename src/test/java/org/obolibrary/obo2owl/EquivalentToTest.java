@@ -1,6 +1,6 @@
 package org.obolibrary.obo2owl;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertTrue;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -47,7 +47,7 @@ public class EquivalentToTest extends OboFormatTestBasics {
 		// TEST CONTENTS OF OWL ONTOLOGY
 		if (true) {
 			Set<OWLEquivalentClassesAxiom> ecas = ontology.getAxioms(AxiomType.EQUIVALENT_CLASSES);
-			boolean ok = false;
+			// boolean ok = false;
 			for (OWLEquivalentClassesAxiom eca : ecas) {
 				System.out.println(eca);
 			}

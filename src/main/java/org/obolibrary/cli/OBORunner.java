@@ -393,6 +393,7 @@ public class OBORunner {
 		return getOntDownloadMap(new URL("http://obo.cvs.sourceforge.net/viewvc/*checkout*/obo/obo/website/cgi-bin/ontologies.txt"));
 	}
 
+	@SuppressWarnings("unused")
 	private static Map<String,String> getOntDownloadMap(String fn) throws IOException {
 		return getOntDownloadMap(new BufferedReader(new FileReader(fn)));
 	}
